@@ -21,4 +21,12 @@ tools {
 			  openshift.withCluster ( CLUSTER_NAME ) {
 			          openshift.withProject ( PROJECT_NAME ) {
 					             echo "Hello from project $(openshift.project()} in cluster $(openshift.cluster()}'
-								 def created = openshift.newAPP( 'https
+								 def created = openshift.newAPP( 'https://github.com/sandeepgit3/ocjenkinsfile' )
+								 oc new-app created $ {created.count()} objects named: ${created.names()}"
+						}
+					}
+				}
+				}
+			}
+	}
+	}
